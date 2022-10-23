@@ -25,7 +25,7 @@ int pendu() {
     {
         motCache[i] = '*';                  // Set the current char to *
     }
-    motCache[i] = '\0';                     // Set the last char to \0
+    motCache[i] = '\0';                     // Set the last char to \0 (end of string)
 
     // Game loop
     do 
