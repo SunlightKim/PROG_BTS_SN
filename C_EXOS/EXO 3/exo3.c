@@ -21,7 +21,7 @@ int main(void)
 
     /* Exercice 3.2 */
     char str[] = "kayak";
-    bool isPalindromeResult = isPalindrome(str);
+    bool isPalindromeResult = isPalindrome(str);                                            // See func/palindrome.c for more info
     printf("isPalindromeResult = %d (1 = true, 0 = false)\n", isPalindromeResult);
 
     /* Exercice 3.3 */
