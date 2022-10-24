@@ -1,45 +1,54 @@
 // BTS SN - BONOLIS ENZO
 
-#include <stdio.h>
-#include <string.h>
+#include "headers/caesar.h"
+#include <stdio.h>          // printf, fgets, stdin
+#include <string.h>         // strlen
+#include <ctype.h>          // toupper, isupper, islower, isalpha
 
 /* Complementary exercise 1 
 * Caesar's cipher
-* EXPLANATION:
-* Each letter of the alphabet is shifted by a certain number of letters, let's name it "key"
-* e.g. key = 3, so A becomes D, B becomes E, C becomes F, etc.
-* if the letter is 'Z', it becomes 'C' (because Z + 3 = C), etc.
-* The key is added to the ASCII code of the letter to get the new letter
-* We need to use modulo 26 to get the correct letter if the key is greater than 26 (e.g. key = 27, so A becomes B)
-* We reiterate the process for each letter of the alphabet
-* However, the ASCII codes for the alphabet ranges from 65 to 90, so we need to keep the result between 65 and 90
+* Formula:
+* E[i] = (P[i] + K) mod N, where:
+* E[i] = encrypted letter
+* P[i] = plain text letter
+* K = key (number of letters to shift)
+* N = number of letters in the alphabet
+* Suppose letter A has the value 0, B has the value 1, etc.
+*         key = 3
+*         ( (int)Letter + key ) mod 26 ==> returns the encrypted letter as a number, called cipherValue
+*                                      ==> (char)cipherValue = '[some letter]'
+*                                      NOTE: ASCII 'a' = 97, 'b' = 98, until 'z' = 122 (lowercase only)
+*                                      NOTE: ASCII 'A' = 65', 'B' = 66, until 'Z' = 90 (uppercase only)
 */
+char* caesar(char* plaintextCae, int keyCae)
+{
+    int i;
+    char cipherCae;
+    int cipherValueCae;
 
-int caesar() {
-    int key; // the key
-    int i; // variable for loops
-    char alphabet[26]; // the alphabet
-    char alphabetShifted[26]; // the shifted alphabet
-
-    // Get the key
-    printf("Entrez la clé (de 1 à 26) : ");
-    scanf("%d", &key);
-
-    // Initialize the alphabet
-    for (i = 0; i < 26; i++) // Loop through the alphabet
+    // Loop through the plaintext
+    for (i = 0; i < strlen(plaintextCae); i++)
     {
-        alphabet[i] = 65 + i; // Set the current char to the ASCII code of the letter
-    }
+        // If the character is lowercase, where range is 97 to 122
+        if (islower(plaintextCae[i]))
+        {
+            cipherValueCae = ( (int)plaintextCae[i] - 97 + keyCae ) % 26 + 97; // Get the cipher value
+            cipherCae = (char)cipherValueCae; // Convert the cipher value to a char
+        }
+        else // Else it's upper case, where range is 65 to 90
+        {
+            cipherValueCae = ( (int)plaintextCae[i] - 65 + keyCae ) % 26 + 65; // Get the cipher value
+            cipherCae = (char)cipherValueCae; // Convert the cipher value to a char
+        }
 
-    // Initialize the shifted alphabet
-    for (i = 0; i < 26; i++) // Loop through the alphabet
-    {
-        alphabetShifted[i] = 65 + ((i + key) % 26); // Set the current char to the ASCII code of the letter shifted by the key
-    }
-
-    // Display the alphabet and the shifted alphabet
-    for (i = 0; i < 26; i++) // Loop through the alphabet
-    {
-        printf("%c -> %c\n", alphabet[i], alphabetShifted[i]); // Display the current char of the alphabet and the shifted alphabet
+        // Print the ciphered character if it is alphanumeric (a letter)
+        if (isalpha(plaintextCae[i]))
+        {
+            printf("%c", cipherCae);
+        }
+        else // Else print the character as is
+        {
+            printf("%c", plaintextCae[i]);
+        }
     }
 }
