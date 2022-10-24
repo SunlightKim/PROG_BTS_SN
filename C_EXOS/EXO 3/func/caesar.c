@@ -14,7 +14,7 @@
 * K = key (number of letters to shift)
 * N = number of letters in the alphabet
 * Suppose letter A has the value 0, B has the value 1, etc.
-*         key = 3
+*         key = SOME NUMBER
 *         ( (int)Letter + key ) mod 26 ==> returns the encrypted letter as a number, called cipherValue
 *                                      ==> (char)cipherValue = '[some letter]'
 *                                      NOTE: ASCII 'a' = 97, 'b' = 98, until 'z' = 122 (lowercase only)

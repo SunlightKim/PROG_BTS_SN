@@ -14,7 +14,7 @@
 * K[i mod kLength] = key letter modulo the key length
 * N = number of letters in the alphabet
 * Suppose letter A has the value 0, B has the value 1, etc.
-*         key = "HELLO"
+*         key = "SOME WORD OR PHRASE"
 *         ( (int)Letter + (int)keyLetter ) mod 26 ==> returns the encrypted letter as a number, called cipherValue
                                                  ==> (char)cipherValue = '[some letter]'
                                                  NOTE: ASCII 'a' = 97, 'b' = 98, until 'z' = 122 (lowercase only)
