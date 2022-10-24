@@ -50,7 +50,7 @@ int main(void)
     scanf("%d", &keyCae);
     // Print the encrypted plain text
     printf("Le texte chiffré est : ");
-    caesar(plaintextCae, keyCae);
+    caesar(plaintextCae, keyCae);                                                           // See func/caesar.c for more info
 
     /* CLEAR BUFFER */
     while ((c = getchar()) != '\n' && c != EOF) { }
@@ -66,7 +66,7 @@ int main(void)
     fgets(plaintextVig, sizeof(plaintextVig), stdin);
     // Print the encrypted plain text
     printf("Le texte chiffré est : ");
-    vigenere(plaintextVig, keyVig);
+    vigenere(plaintextVig, keyVig);                                                         // See func/vigenere.c for more info
 
     return 0;
 }
