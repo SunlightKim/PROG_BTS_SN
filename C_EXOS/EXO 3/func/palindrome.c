@@ -3,6 +3,13 @@
 #include "headers/palindrome.h"
 
 // Check if a string is a palindrome
+/* EXPLANATION
+* str[i] = current char
+* str[len - i - 1] = char at the opposite end
+* --> because the index starts at 0, we need to subtract 1 from the length to get the last char
+* we also need to subtract i from the length to get the char at the opposite end
+* e.g. "hello" -> len = 5 -> str[0] = h, so the opposite end is str[5 - 0 - 1] = str[4] = o
+*/
 bool isPalindrome(char str[]) 
 {
     int len = strlen(str);                      // Get the length of the string
