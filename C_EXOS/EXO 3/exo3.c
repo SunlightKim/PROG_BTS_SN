@@ -1,14 +1,17 @@
 // BTS SN - BONOLIS ENZO
 
+// Include headers
 #include <stdio.h>
 #include "func/headers/mths.h"
-#include "func/mths.c"
 #include "func/headers/palindrome.h"
+#include "func/headers/caesar.h"
+#include "func/headers/vigenere.h"
+
+// Include functions
+#include "func/mths.c"
 #include "func/palindrome.c"
 #include "func/pendu.c"
-#include "func/headers/caesar.h"
 #include "func/caesar.c"
-#include "func/headers/vigenere.h"
 #include "func/vigenere.c"
 
 int main(void)
