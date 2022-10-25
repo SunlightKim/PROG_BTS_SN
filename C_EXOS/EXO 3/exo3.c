@@ -21,9 +21,15 @@ int main(void)
     printf("mulresult = %d\n", mulresult);
 
     /* Exercice 3.2 */
-    char str[] = "kayak";
+    char str[127];
+    printf("Entrez un mot à vérifier :");
+    scanf("%s", str);
     int isPalindromeResult = isPalindrome(str);                                            // See func/palindrome.c for more info
-    printf("isPalindromeResult = %d (1 = true, 0 = false)\n", isPalindromeResult);
+    printf("isPalindrome = %d (1 = true, 0 = false)\n", isPalindromeResult);
+
+    /* CLEAR BUFFER */
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) { }
 
     /* Exercice 3.3 */
     char mot[101];
@@ -33,7 +39,6 @@ int main(void)
     pendu(mot);
 
     /* CLEAR BUFFER */
-    int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
 
     /* Complementary Exercises */
