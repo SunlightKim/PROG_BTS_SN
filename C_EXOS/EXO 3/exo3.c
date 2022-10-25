@@ -10,6 +10,8 @@
 
 int main(void)
 {
+    int c;                                                                                  // Used to clear the buffer
+
     /* Exercice 3.1 */
     int addresult = add(2, 3);
     printf("addresult = %d\n", addresult);
@@ -28,7 +30,6 @@ int main(void)
     printf("isPalindrome = %d (1 = true, 0 = false)\n", isPalindromeResult);
 
     /* CLEAR BUFFER */
-    int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
 
     /* Exercice 3.3 */
