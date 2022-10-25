@@ -4,8 +4,8 @@
 #define PALINDROME_H_
 
 #include <string.h>                     // For strlen
-#include <stdbool.h>                    // For bool
+#include "../func/palindrome.c"
 
-bool isPalindrome(char str[]);          // Function prototype for isPalindrome (see palindrome.c)
+int isPalindrome(char str[]);          // Function prototype for isPalindrome (see palindrome.c)
 
 #endif /* PALINDROME_H_ */

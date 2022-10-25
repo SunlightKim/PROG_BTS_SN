@@ -1,6 +1,6 @@
 // BTS SN - BONOLIS ENZO
 
-#include "headers/mths.h"
+#include "../inc/mths.h"
 
 // Add two numbers using mths add
 int add(int a, int b) 

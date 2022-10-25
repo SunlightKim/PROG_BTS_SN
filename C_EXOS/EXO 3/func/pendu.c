@@ -1,5 +1,6 @@
 // BTS SN - BONOLIS ENZO
 
+#include "../inc/pendu.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -8,20 +9,14 @@
 * (le jeu du pendu)
 */
 
-int pendu() {
-    char mot[20]; // the word to guess of 20 characters max
+int pendu(char mot[]) {
     char lettre; // the letter proposed by the player
     char motCache[20]; // the word to display
     int nbCoups = 0; // the number of attempts / the number of wrong letters proposed
     int i, j, trouve, nbLettres; // variables for loops and conditions
 
-    // Get the word to guess
-    printf("Entrez le mot à deviner (20 caractères maximum): ");
-    scanf("%s", mot);
-
     // Initialize the word to display
-    nbLettres = strlen(mot);                // Get the length of the word to guess
-    for (i = 0; i < nbLettres; i++)         // Loop through the word to guess
+    for (i = 0; mot[i] != '\0'; i++)         // Loop through the word to guess (length of string is found by mot[i] != '\0')
     {
         motCache[i] = '*';                  // Set the current char to *
     }
@@ -39,7 +34,7 @@ int pendu() {
 
         // Check if the letter is in the word
         trouve = 0;                                     // Set trouve to 0
-        for (i = 0; i < nbLettres; i++)                 // Loop through the word to guess
+        for (i = 0; mot[i] != '\0'; i++)                 // Loop through the word to guess
         {
             if (mot[i] == lettre)                       // If the current char is the same as the letter proposed by the player
             {

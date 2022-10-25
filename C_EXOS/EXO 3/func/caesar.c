@@ -1,6 +1,6 @@
 // BTS SN - BONOLIS ENZO
 
-#include "headers/caesar.h"
+#include "../inc/caesar.h"
 #include <stdio.h>          // printf, fgets, stdin
 #include <string.h>         // strlen
 #include <ctype.h>          // toupper, isupper, islower, isalpha

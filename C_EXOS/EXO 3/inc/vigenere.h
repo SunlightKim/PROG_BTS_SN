@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
+#include "../func/vigenere.c"
 
 // Function prototypes
 char* vigenere(char* plaintextVig, char* keyVig);

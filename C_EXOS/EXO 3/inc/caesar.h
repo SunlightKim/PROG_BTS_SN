@@ -3,7 +3,8 @@
 
 #include <stdio.h>          
 #include <string.h>         
-#include <ctype.h>          
+#include <ctype.h>
+#include "../func/caesar.c"          
 
 // Function prototypes
 char* caesar(char* plaintextCae, int keyCae);

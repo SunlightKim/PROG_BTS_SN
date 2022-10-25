@@ -1,18 +1,12 @@
 // BTS SN - BONOLIS ENZO
 
-// Include headers
+// Include librairies
 #include <stdio.h>
-#include "func/headers/mths.h"
-#include "func/headers/palindrome.h"
-#include "func/headers/caesar.h"
-#include "func/headers/vigenere.h"
-
-// Include functions
-#include "func/mths.c"
-#include "func/palindrome.c"
-#include "func/pendu.c"
-#include "func/caesar.c"
-#include "func/vigenere.c"
+#include "inc/mths.h"
+#include "inc/palindrome.h"
+#include "inc/pendu.h"
+#include "inc/caesar.h"
+#include "inc/vigenere.h"
 
 int main(void)
 {
@@ -28,11 +22,15 @@ int main(void)
 
     /* Exercice 3.2 */
     char str[] = "kayak";
-    bool isPalindromeResult = isPalindrome(str);                                            // See func/palindrome.c for more info
+    int isPalindromeResult = isPalindrome(str);                                            // See func/palindrome.c for more info
     printf("isPalindromeResult = %d (1 = true, 0 = false)\n", isPalindromeResult);
 
     /* Exercice 3.3 */
-    pendu();
+    char mot[101];
+    // Get the word
+    printf("Entrez le mot à déviner :");
+    scanf("%s", &mot);
+    pendu(mot);
 
     /* CLEAR BUFFER */
     int c;
@@ -56,16 +54,15 @@ int main(void)
     while ((c = getchar()) != '\n' && c != EOF) { }
 
     /* VIGENERE CIPHER */
-    char keyVig[101];
-    char plaintextVig[101];
+    char keyVig[15];
+    char plaintextVig[127];
     // Get the key
     printf("Entrez la clé de chiffrement :");
-    fgets(keyVig, sizeof(keyVig), stdin);
+    gets(keyVig);
     // Get the plaintext
     printf("Entrez le texte à chiffrer : ");
-    fgets(plaintextVig, sizeof(plaintextVig), stdin);
+    gets(plaintextVig);
     // Print the encrypted plain text
-    printf("Le texte chiffré est : ");
     vigenere(plaintextVig, keyVig);                                                         // See func/vigenere.c for more info
 
     return 0;
