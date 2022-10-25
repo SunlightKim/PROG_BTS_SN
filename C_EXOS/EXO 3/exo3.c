@@ -32,7 +32,7 @@ int main(void)
     while ((c = getchar()) != '\n' && c != EOF) { }
 
     /* Exercice 3.3 */
-    char mot[101];
+    char mot[127];
     // Get the word
     printf("Entrez le mot à déviner :");
     scanf("%s", &mot);
@@ -44,7 +44,7 @@ int main(void)
     /* Complementary Exercises */
     /* CAESAR CIPHER */
     int keyCae;
-    char plaintextCae[101];
+    char plaintextCae[127];
     // Get the plaintext
     printf("Entrez le texte à chiffrer :");
     fgets(plaintextCae, sizeof(plaintextCae), stdin);
