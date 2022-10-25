@@ -57,10 +57,10 @@ int main(void)
     char keyVig[15];
     char plaintextVig[127];
     // Get the key
-    printf("Entrez la clé de chiffrement :");
+    printf("Entrez la clé de chiffrement (16 caractères max) :");
     gets(keyVig);
     // Get the plaintext
-    printf("Entrez le texte à chiffrer : ");
+    printf("Entrez le texte à chiffrer (128 caractères max) : ");
     gets(plaintextVig);
     // Print the encrypted plain text
     vigenere(plaintextVig, keyVig);                                                         // See func/vigenere.c for more info
