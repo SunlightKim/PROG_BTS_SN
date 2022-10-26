@@ -1,7 +1,7 @@
 // BTS SN - BONOLIS ENZO
 
 #include <stdio.h>
-#include <stdlib.h>
+#include "../inc/exo1.h"
 
 /* Exercice 1.1 
 * Declare 3 different variables of type int, float and char
@@ -9,7 +9,7 @@
 * Display the values of the variables separately (one by one)
 * Then display them all together on the same line.
 */
-void exo1_1(void)
+void exo1_1()
 {
     int i = 1;                                                          // Declaration and initialization of an int variable i with the value 1
     float f = 2.5;                                                      // Declaration and initialization of a float variable f with the value 2.5
@@ -30,16 +30,16 @@ void exo1_1(void)
 * Save these informations
 * Display them
 */
-void exo1_2(void)
+void exo1_2()
 {
     int age;                                    // Declaration of an int variable age
     char gender;                                // Declaration of a char variable gender
     
     printf("Quel est votre sexe ? (H/F) ");     // Ask the user their gender
-    scanf("%c", &gender);                       // Save the gender in the variable gender
+    scanf_s("%c", &gender);                       // Save the gender in the variable gender
 
     printf("Quel est votre age ? ");            // Ask the user their age
-    scanf("%d", &age);                          // Save the age in the variable age
+    scanf_s("%d", &age);                          // Save the age in the variable age
 
     /* Print the information all together */
     printf("Vous avez %d ans et vous etes de sexe %c\n", age, gender);
@@ -50,7 +50,7 @@ void exo1_2(void)
 * Make an operation between an integer and a real number and save the result as a real number
 * Show the results of the operations
 */
-void exo1_3(void)
+void exo1_3()
 {
     int a = 5;                  // Declaration and initialization of an int variable a with the value 5
     int b = 2;                  // Declaration and initialization of an int variable b with the value 2
@@ -67,7 +67,7 @@ void exo1_3(void)
 * Displaying the integer value of a char variable (cast)
 * Displaying the value of a char in an int variable (cast)
 */
-void exo1_4(void)
+void exo1_4()
 {
     /* 1.4.1 */
     // Display the letter A with the number 1 (ASCII art text)
@@ -83,14 +83,4 @@ void exo1_4(void)
 
     printf("La lettre '%c' a pour code ASCII '%d'\n", letter, (int)letter);    // Cast the char variable letter to an int
     printf("Le code ASCII '%d' a pour lettre '%c'\n", number, (char)number);   // Cast the int variable number to a char
-}
-
-/* MAIN FUNCTION */
-int main(void)
-{
-    exo1_1();
-    exo1_2();
-    exo1_3();
-    exo1_4();
-    return 0;
 }

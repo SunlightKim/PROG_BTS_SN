@@ -1,0 +1,6 @@
+#ifndef PROG_BTS_SN_CLEARBUFFER_H
+#define PROG_BTS_SN_CLEARBUFFER_H
+
+void clearBuffer();
+
+#endif //PROG_BTS_SN_CLEARBUFFER_H

@@ -1,16 +1,44 @@
 // BTS SN - BONOLIS ENZO
 
-// Include librairies
+// Include libraries
 #include <stdio.h>
 #include "inc/mths.h"
 #include "inc/palindrome.h"
 #include "inc/pendu.h"
 #include "inc/caesar.h"
 #include "inc/vigenere.h"
+#include "inc/exo1.h"
+#include "inc/exo2.h"
+#include "inc/clearbuffer.h"
 
 int main(void)
 {
-    int c;                                                                                  // Used to clear the buffer
+    /* Exercise 1 */
+    exo1_1();
+    exo1_2();
+    exo1_3();
+    exo1_4();
+
+    /* CLEAR BUFFER */
+    clearBuffer();
+
+    /* Exercise 2 */
+    exo2_1();
+
+    /* CLEAR BUFFER */
+    clearBuffer();
+
+    exo2_2();
+
+    /* CLEAR BUFFER */
+    clearBuffer();
+
+    exo2_3();
+    exo2_4();
+    exo2_5();
+
+    /* CLEAR BUFFER */
+    clearBuffer();
 
     /* Exercice 3.1 */
     int addresult = add(2, 3);
@@ -30,7 +58,7 @@ int main(void)
     printf("isPalindrome = %d (1 = true, 0 = false)\n", isPalindromeResult);
 
     /* CLEAR BUFFER */
-    while ((c = getchar()) != '\n' && c != EOF) { }
+    clearBuffer();
 
     /* Exercice 3.3 */
     char mot[127];
@@ -40,7 +68,7 @@ int main(void)
     pendu(mot);
 
     /* CLEAR BUFFER */
-    while ((c = getchar()) != '\n' && c != EOF) { }
+    clearBuffer();
 
     /* Complementary Exercises */
     /* CAESAR CIPHER */
@@ -57,7 +85,7 @@ int main(void)
     caesar(plaintextCae, keyCae);                                                           // See func/caesar.c for more info
 
     /* CLEAR BUFFER */
-    while ((c = getchar()) != '\n' && c != EOF) { }
+    clearBuffer();
 
     /* VIGENERE CIPHER */
     char keyVig[15];

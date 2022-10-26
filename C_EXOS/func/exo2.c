@@ -3,18 +3,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "../inc/exo2.h"
 
 /* Exercice 2.1 
 * Ask the user their age, save it into a variable
 * and check if the user is an adult or not
 * Display it
 */
-void exo2_1(void)
+void exo2_1()
 {
     int age;                                    // Declaration of an int variable age
 
     printf("Quel est votre age ? ");            // Ask the user their age
-    scanf("%d", &age);                          // Save the age in the variable age
+    scanf_s("%d", &age);                          // Save the age in the variable age
 
     /* Check if the user is an adult or not */
     if (age >= 18)                              // If the user is an adult
@@ -32,12 +33,12 @@ void exo2_1(void)
 * then check if the letter is the same as the one you chose
 * Display to the user if the letter is the same or not
 */
-void exo2_2(void)
+void exo2_2()
 {
     char letter;                                // Declaration of a char variable letter
 
     printf("Choisissez une lettre : ");         // Ask the user a letter
-    scanf(" %c", &letter);                      // Save the letter in the variable letter
+    scanf_s(" %c", &letter);                      // Save the letter in the variable letter
                                                 // The space before %c is used to avoid the scanf to read the enter key
 
     /* Check if the letter is the same as the one predifined */
@@ -56,7 +57,7 @@ void exo2_2(void)
 * Display a number from 0 to 50 using a do while loop
 * Display a number from 50 to 0
 */
-void exo2_3(void)
+void exo2_3()
 {
     int i;                                      // Declaration of an int variable i
 
@@ -87,7 +88,7 @@ void exo2_3(void)
 /* Exercice 2.4 
 * Display all even numbers from 0 to 50
 */
-void exo2_4(void)
+void exo2_4()
 {
     int i;                                      // Declaration of an int variable i
 
@@ -108,7 +109,7 @@ void exo2_4(void)
 * Continue until the user finds the number
 * Display the number of tries
 */
-void exo2_5(void)
+void exo2_5()
 {
     int randomnumber;                                                   // Declaration of an int variable randomnumber
     int usernumber;                                                     // Declaration of an int variable usernumber
@@ -121,7 +122,7 @@ void exo2_5(void)
     do                                                                  
     {
         printf("Entrez un nombre compris entre 0 et 20 : ");            // Ask the user a number
-        scanf("%d", &usernumber);                                       // Save the number in the variable usernumber
+        scanf_s("%d", &usernumber);                                       // Save the number in the variable usernumber
 
         if (usernumber < randomnumber)                                  // If the number is less than the random number
         {
@@ -135,15 +136,4 @@ void exo2_5(void)
     } while (usernumber != randomnumber);                               // While the number is not equal to the random number
 
     printf("Vous avez trouvé le nombre en %d essais\n", tries);
-}
-
-/* MAIN FUNCTION */
-int main(void)
-{
-    exo2_1();
-    exo2_2();
-    exo2_3();
-    exo2_4();
-    exo2_5();
-    return 0;
 }
