@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 project(PROG_BTS_SN C)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD 23)
 
 include_directories(C_EXOS/inc)
 
