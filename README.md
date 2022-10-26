@@ -31,3 +31,5 @@ Ce repo permet de stocker et partager des exercices de programmation pour mon BT
 | 110b652                             | Improvements: Refactor code                                         | :white_check_mark: |
 | b473489                             | Revision: `.gitignore` update                                       | :white_check_mark: |
 | 84ac885                             | Revision: unwanted `.idea` directory removed                        | :white_check_mark: |
+| 5fea748                             | [UPDATE] Switched to C23                                            | :white_check_mark: |
+| 2a01978                             | [FIX] Non-void functions didn't return any (changed to void)        | :white_check_mark: |

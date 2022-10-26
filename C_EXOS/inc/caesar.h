@@ -6,6 +6,6 @@
 #include <ctype.h>
 
 // Function prototypes
-char* caesar(char* plaintextCae, int keyCae);
+void caesar(char* plaintextCae, int keyCae);
 
 #endif /* CAESAR_H_ */

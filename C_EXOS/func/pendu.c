@@ -9,7 +9,7 @@
 * (le jeu du pendu)
 */
 
-int pendu(char mot[]) 
+void pendu(char mot[])
 {
     char lettre; // the letter proposed by the player
     char motCache[127]; // the word to display
