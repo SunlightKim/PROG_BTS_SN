@@ -25,7 +25,7 @@ int main(void)
     /* Exercice 3.2 */
     char str[127];
     printf("Entrez un mot à vérifier :");
-    scanf("%s", str);
+    scanf_s("%s", str);
     int isPalindromeResult = isPalindrome(str);                                            // See func/palindrome.c for more info
     printf("isPalindrome = %d (1 = true, 0 = false)\n", isPalindromeResult);
 
@@ -36,7 +36,7 @@ int main(void)
     char mot[127];
     // Get the word
     printf("Entrez le mot à déviner :");
-    scanf("%s", &mot);
+    scanf_s("%s", &mot);
     pendu(mot);
 
     /* CLEAR BUFFER */
@@ -51,7 +51,7 @@ int main(void)
     fgets(plaintextCae, sizeof(plaintextCae), stdin);
     // Get the key
     printf("Entrez la clé (de 1 à 26) :");
-    scanf("%d", &keyCae);
+    scanf_s("%d", &keyCae);
     // Print the encrypted plain text
     printf("Le texte chiffré est : ");
     caesar(plaintextCae, keyCae);                                                           // See func/caesar.c for more info

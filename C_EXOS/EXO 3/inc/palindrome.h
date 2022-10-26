@@ -4,7 +4,6 @@
 #define PALINDROME_H_
 
 #include <string.h>                     // For strlen
-#include "../func/palindrome.c"
 
 int isPalindrome(char str[]);          // Function prototype for isPalindrome (see palindrome.c)
 
