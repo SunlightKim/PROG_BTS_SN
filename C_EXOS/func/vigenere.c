@@ -10,7 +10,7 @@
 * Formula:
 * E[i] = (P[i] + K[i mod kLength]) mod N, where:
 */
-char* vigenere(char* plaintextVig, char* keyVig)
+void vigenere(char* plaintextVig, char* keyVig)
 {
     unsigned int i, j; 
     printf("Le texte chiffré est :");

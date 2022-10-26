@@ -20,7 +20,7 @@
 *                                      NOTE: ASCII 'a' = 97, 'b' = 98, until 'z' = 122 (lowercase only)
 *                                      NOTE: ASCII 'A' = 65', 'B' = 66, until 'Z' = 90 (uppercase only)
 */
-char* caesar(char* plaintextCae, int keyCae)
+void caesar(char* plaintextCae, int keyCae)
 {
     int i;
     char cipherCae;

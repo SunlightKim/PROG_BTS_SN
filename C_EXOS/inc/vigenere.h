@@ -6,6 +6,6 @@
 #include <ctype.h>
 
 // Function prototypes
-char* vigenere(char* plaintextVig, char* keyVig);
+void vigenere(char* plaintextVig, char* keyVig);
 
 #endif /* VIGENERE_H_ */
