@@ -1,7 +1,13 @@
 # VSCODE
-*.vscode
+.vscode
 *.code-workspace
 
 # EXECUTABLES
 *.exe
 *.out
+
+# CMAKE
+cmake-build-debug
+
+# IDE
+.idea
