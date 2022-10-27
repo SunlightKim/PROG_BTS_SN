@@ -14,7 +14,7 @@ void pendu(char mot[])
     char lettre; // the letter proposed by the player
     char motCache[127]; // the word to display
     int nbCoups = 0; // the number of attempts / the number of wrong letters proposed
-    int i, trouve, nbLettres; // variables for loops and conditions
+    int i, trouve; // variables for loops and conditions
 
     // Initialize the word to display
     for (i = 0; mot[i] != '\0'; i++)         // Loop through the word to guess (length of string is found by mot[i] != '\0')
